@@ -53,7 +53,7 @@
   <main class="page__main main-content">
 
     <section class="promo">
-      <h2 class="promo__section-heading visually-hidden">Новинки</h2>
+      <h2 class="promo__heading page__section-heading visually-hidden">Новинки</h2>
       <ul class="promo__list">
         <li class="promo__item promo__item--decaf promo__item--active promo-card">
           <button class="promo-card__prev-button" type="button"></button>
@@ -64,8 +64,8 @@
           <p class="promo-card__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
           <div class="promo-card__buy">
             <div class="promo-card__price">
-              <del class="promo-card__old-price">295&#8381</del>
-              <ins class="promo-card__new-price">225&#8381</ins>
+              <del class="promo-card__old-price">295&#8381;</del>
+              <ins class="promo-card__new-price">225&#8381;</ins>
             </div>
             <a class="promo-card__order-button" href="#">Заказать</a>
           </div>
@@ -79,8 +79,8 @@
           <p class="promo-card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
           <div class="promo-card__buy">
             <div class="promo-card__price">
-              <del class="promo-card__old-price">285&#8381</del>
-              <ins class="promo-card__new-price">265&#8381</ins>
+              <del class="promo-card__old-price">285&#8381;</del>
+              <ins class="promo-card__new-price">265&#8381;</ins>
             </div>
             <a class="promo-card__order-button" href="#">Заказать</a>
           </div>
@@ -94,8 +94,8 @@
           <p class="promo-card__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
           <div class="promo-card__buy">
             <div class="promo-card__price">
-              <del class="promo-card__old-price">395&#8381</del>
-              <ins class="promo-card__new-price">375&#8381</ins>
+              <del class="promo-card__old-price">395&#8381;</del>
+              <ins class="promo-card__new-price">375&#8381;</ins>
             </div>
             <a class="promo-card__order-button" href="#">Заказать</a>
           </div>
@@ -104,78 +104,107 @@
     </section>
 
     <section class="features">
-      <h2 class="features__heading">Преимущества</h2>
-      <p сlass="features__description">Главные причины выбрать Drink2Go</p>
+      <h2 class="features__heading page__section-heading">Преимущества</h2>
+      <p class="features__description page__section-description">Главные причины выбрать Drink2Go</p>
       <ul class="features__list">
         <li class="features__item feature">
           <h3 class="feature__heading">Скорость</h3>
-          <p class="feature__text>">Готовый напиток всегда под рукой &mdash просто открой банку</p>
+          <p class="feature__text">Готовый напиток всегда под рукой &mdash; просто открой банку</p>
         </li>
         <li class="features__item feature">
           <h3 class="feature__heading">Удобство</h3>
-          <p class="feature__text>">Легко помещается и в карман, и в маленькую сумочку</p>
+          <p class="feature__text">Легко помещается и в карман, и в маленькую сумочку</p>
         </li>
         <li class="features__item feature">
           <h3 class="feature__heading">Бодрость</h3>
-          <p class="feature__text>">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+          <p class="feature__text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
         </li>
         <li class="features__item feature">
           <h3 class="feature__heading">Экологичность</h3>
-          <p class="feature__text>">Вся упаковка сделана из перерабатываемых материалов</p>
+          <p class="feature__text">Вся упаковка сделана из перерабатываемых материалов</p>
         </li>
       </ul>
     </section>
 
     <section class="catalog">
-      <h2 class="catalog__heading">Каталог</h2>
-      <p class="catalog__description">Каталог кофейных напитков</p>
+      <h2 class="catalog__heading  page__section-heading">Каталог</h2>
+      <p class="catalog__description page__section-description">Каталог кофейных напитков</p>
 
       <section class="catalog__filter">
-        <h3 class="catalog__filter-heading">Фильтр</h3>
+        <h3 class="catalog__filter-heading visually-hidden">Фильтр</h3>
         <form class="catalog__filter-form filter" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="filter__price price-field">
-            <legend class="filter__label price-field__legend">Цена</legend>
+          <fieldset class="filter__field filter__field--price price-field">
+            <legend class="filter__legend price-field__legend">Цена</legend>
             <div class="price-field__slider"></div>
-            <input class="filter__input price-field__input-number price-field__input-number--min" type="number" name="price-min" placeholder="0" min="0" max="1000" step="50">
-            <input class="filter__input price-field__input-number price-field__input-number--max" type="number" name="price-max" placeholder="900" min="0" max="1000" step="50">
+            <input class="filter__input price-field__input price-field__input--min" type="number" name="price-min" placeholder="0" min="0" max="1000" step="50">
+            <span class="price-field__dash"></span>
+            <input class="filter__input price-field__input price-field__input--max" type="number" name="price-max" placeholder="1000" min="0" max="1000" step="50">
           </fieldset>
-          <fieldset class="filter__lactose milk-field">
+          <fieldset class="filter__field filter__field--lactose milk-field">
             <legend class="filter__legend">Наличие молока</legend>
-            <input class="milk-field__input" type="radio" name="milk" value="all" id="milk-all" checked>
-            <label class="filter__label milk-field__label" for="milk-all">Неважно</label>
-            <input class="milk-field__input" type="radio" name="milk" value="animal" id="milk-animal">
-            <label class="filter__label milk-field__label" for="milk-animal">Только животное</label>
-            <input class="milk-field__input" type="radio" name="milk" value="plant" id="milk-plant">
-            <label class="filter__label milk-field__label" for="milk-plant">Только растительное</label>
-            <input class="milk-field__input" type="radio" name="milk" value="none" id="milk-none" disabled>
-            <label class="filter__label milk-field__label" for="milk-none">Без молока</label>
-          </fieldset>
-          <fieldset class="filter__origin origin-field">
+            <div class="filter__input-box">
+              <input class="filter__input milk-field__input" type="radio" name="milk" value="all" id="milk-all" checked>
+              <label class="filter__label milk-field__label" for="milk-all">Неважно</label>
+            </div>
+            <div class="filter__input-box">
+              <input class="filter__input milk-field__input" type="radio" name="milk" value="animal" id="milk-animal">
+              <label class="filter__label milk-field__label" for="milk-animal">Только животное</label>
+            </div>
+            <div class="filter__input-box">
+              <input class="filter__input milk-field__input" type="radio" name="milk" value="plant" id="milk-plant">
+              <label class="filter__label milk-field__label" for="milk-plant">Только растительное</label>
+            </div>
+            <div class="filter__input-box">
+              <input class="filter__input milk-field__input" type="radio" name="milk" value="none" id="milk-none" disabled>
+              <label class="filter__label milk-field__label" for="milk-none">Без молока</label>
+            </div>
+            </fieldset>
+          </div>
+          <fieldset class="filter__field filter__field--origin origin-field">
             <legend class="filter__legend">Страна произрастания</legend>
-            <input class="origin-field__input" type="checkbox" name="origin" value="brazil" id="origin-brazil" checked>
-            <label class="filter__label origin-field__label" for="origin-brazil">Бразилия</label>
-            <input class="origin-field__input" type="checkbox" name="origin" value="ethiopia" id="origin-ethiopia">
-            <label class="filter__label origin-field__label" for="origin-ethiopia">Эфиопия</label>
-            <input class="origin-field__input" type="checkbox" name="origin" value="colombia" id="origin-colombia">
-            <label class="filter__label origin-field__label" for="origin-colombia">Колумбия</label>
-            <input class="origin-field__input" type="checkbox" name="origin" value="costa-rica" id="origin-costa-rica">
-            <label class="filter__label origin-field__label" for="origin-costa-rica">Коста-Рика</label>
-            <input class="origin-field__input" type="checkbox" name="origin" value="peru" id="origin-peru" disabled>
-            <label class="filter__label origin-field__label" for="origin-peru">Перу</label>
+            <div class="filter__input-box">
+              <input class="filter__input origin-field__input" type="checkbox" name="origin" value="brazil" id="origin-brazil" checked>
+              <label class="filter__label origin-field__label" for="origin-brazil">Бразилия</label>
+            </div>
+            <div class="filter__input-box">
+              <input class="filter__input origin-field__input" type="checkbox" name="origin" value="ethiopia" id="origin-ethiopia">
+              <label class="filter__label origin-field__label" for="origin-ethiopia">Эфиопия</label>
+            </div>
+            <div class="filter__input-box">
+              <input class="filter__input origin-field__input" type="checkbox" name="origin" value="colombia" id="origin-colombia">
+              <label class="filter__label origin-field__label" for="origin-colombia">Колумбия</label>
+            </div>
+            <div class="filter__input-box">
+              <input class="filter__input origin-field__input" type="checkbox" name="origin" value="costa-rica" id="origin-costa-rica">
+              <label class="filter__label origin-field__label" for="origin-costa-rica">Коста-Рика</label>
+            </div>
+            <div class="filter__input-box">
+              <input class="filter__input origin-field__input" type="checkbox" name="origin" value="peru" id="origin-peru" disabled>
+              <label class="filter__label origin-field__label" for="origin-peru">Перу</label>
+            </div>
           </fieldset>
-          <button class="filter__button" type="reset">Сбросить фильтр</button>
-          <button class="filter__button" type="submit" hidden>Отправить</button>
+          <button class="filter__button filter__button--reset" type="reset">Сбросить фильтр</button>
+          <button class="filter__button filter__button--submit" type="submit" hidden>Отправить</button>
         </form>
       </section>
 
       <section class="catalog__sort sort">
         <h3 class="sort__heading">Сортировка:</h3>
-        <select class="sort__select">
+        <div class="sort__selector">
+          <span class="sort__selected">по умолчанию</span>
+          <ul class="sort__list sort__list--closed">
+            <li class="sort__item sort__item--current">по умолчанию</li>
+            <li class="sort__item">сначала дорогие</li>
+            <li class="sort__item">сначала дешёвые</li>
+            <li class="sort__item">высокий рейтинг</li>
+          </ul>
+        </div>
+        <!-- <select class="sort__select">
           <option value="default">по умолчанию</option>
           <option value="to-lower-price">сначала дорогие</option>
           <option value="to-higher-price">сначала дешёвые</option>
           <option value="high-rating">высокий рейтинг</option>
-        </select>
+        </select> -->
       </section>
 
       <section class="catalog__products">
@@ -282,7 +311,7 @@
     </section>
 
     <section class="map">
-      <h2 class="map__heading visualy-hidden">Расположение магазина</h2>
+      <h2 class="map__heading page__section-heading visualy-hidden">Расположение магазина</h2>
       <img class="map__img" src="" width="320" height="420">
     </section>
   </main>
