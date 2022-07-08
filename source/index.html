@@ -5,8 +5,10 @@
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
-  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-500.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-600.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-700.woff2" as="font">
 
   <link rel="stylesheet" href="css/style.min.css">
 
@@ -53,38 +55,50 @@
     <section class="promo">
       <h2 class="promo__section-heading visually-hidden">Новинки</h2>
       <ul class="promo__list">
-        <li class="promo__item promo__item--active">
-          <img class="promo__img" src="" width="280" height="280">
-          <p class="promo__new-tag">Новинка!</p>
-          <h3 class="promo__item-heading">Декаф Флэт Уайт</h3>
-          <p class="promo__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-          <div class="promo__price">
-            <del class="promo__old-price">295&#8381</del>
-            <ins class="promo__new-price">225&#8381</ins>
+        <li class="promo__item promo__item--decaf promo__item--active promo-card">
+          <button class="promo-card__prev-button" type="button"></button>
+          <button class="promo-card__next-button" type="button"></button>
+          <img class="promo-card__img" src="img/promo-decaf-mobile.png" width="280" height="280">
+          <p class="promo-card__new-tag">Новинка!</p>
+          <h3 class="promo-card__heading">Декаф Флэт Уайт</h3>
+          <p class="promo-card__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+          <div class="promo-card__buy">
+            <div class="promo-card__price">
+              <del class="promo-card__old-price">295&#8381</del>
+              <ins class="promo-card__new-price">225&#8381</ins>
+            </div>
+            <a class="promo-card__order-button" href="#">Заказать</a>
           </div>
-          <a class="promo__button" href="#">Заказать</a>
         </li>
-        <li class="promo__item">
-          <img class="promo__img" src="" width="280" height="280">
-          <p class="promo__new-tag">Новинка!</p>
-          <h3 class="promo__item-heading">Лавандовый Латте</h3>
-          <p class="promo__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-          <div class="promo__price">
-            <del class="promo__old-price">285&#8381</del>
-            <ins class="promo__new-price">265&#8381</ins>
+        <li class="promo__item promo__item--lavander promo-card">
+          <button class="promo-card__prev-button" type="button"></button>
+          <button class="promo-card__next-button" type="button"></button>
+          <img class="promo-card__img" src="img/promo-lavanda-mobile.png" width="280" height="280">
+          <p class="promo-card__new-tag">Новинка!</p>
+          <h3 class="promo-card__heading">Лавандовый Латте</h3>
+          <p class="promo-card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+          <div class="promo-card__buy">
+            <div class="promo-card__price">
+              <del class="promo-card__old-price">285&#8381</del>
+              <ins class="promo-card__new-price">265&#8381</ins>
+            </div>
+            <a class="promo-card__order-button" href="#">Заказать</a>
           </div>
-          <a class="promo__button" href="#">Заказать</a>
         </li>
-        <li class="promo__item">
-          <img class="promo__img" src="" width="280" height="280">
-          <p class="promo__new-tag">Новинка!</p>
-          <h3 class="promo__item-heading">Тройной Эспрессо</h3>
-          <p class="promo__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-          <div class="promo__price">
-            <del class="promo__old-price">395&#8381</del>
-            <ins class="promo__new-price">375&#8381</ins>
+        <li class="promo__item promo__item--triple promo-card">
+          <button class="promo-card__prev-button" type="button"></button>
+          <button class="promo-card__next-button" type="button"></button>
+          <img class="promo-card__img" src="img/promo-triple-mobile.png" width="280" height="280">
+          <p class="promo-card__new-tag">Новинка!</p>
+          <h3 class="promo-card__heading">Тройной Эспрессо</h3>
+          <p class="promo-card__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+          <div class="promo-card__buy">
+            <div class="promo-card__price">
+              <del class="promo-card__old-price">395&#8381</del>
+              <ins class="promo-card__new-price">375&#8381</ins>
+            </div>
+            <a class="promo-card__order-button" href="#">Заказать</a>
           </div>
-          <a class="promo__button" href="#">Заказать</a>
         </li>
       </ul>
     </section>

@@ -1,4 +1,5 @@
 .nav__toggle {
+  display: flex;
   position: absolute;
   top: 0;
   right: 0;
@@ -15,8 +16,16 @@
   background-image: url("../img/menu-close.svg");
 }
 
+.nav--nojs .nav__toggle {
+  display: none;
+}
+
 .nav__list {
   .reset-list;
+}
+
+.nav--closed .nav__list {
+  display: none;
 }
 
 .nav__item {
@@ -28,7 +37,6 @@
 }
 .nav__link {
   .reset-link();
-  display: block;
   text-align: center;
   font-weight: 500;
   font-size: 12px;

@@ -1,0 +1,82 @@
+.promo-card {
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+  grid-template-rows: repeat(5, auto);
+  justify-items: center;
+  text-align: center;
+}
+
+.promo-card__prev-button {
+  .reset-button();
+  background-image: url("../img/button-prev.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 20px;
+  grid-column: 1/2;
+  grid-row: 1/-1;
+}
+
+.promo-card__next-button {
+  .reset-button();
+  background-image: url("../img/button-next.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 20px;
+  grid-column: -1/-2;
+  grid-row: 1/-1;
+}
+
+ .promo-card__img {
+  margin-top: 20px;
+ }
+
+ .promo-card__new-tag {
+  .badge-text();
+  margin-top: 10px;
+  margin-bottom: 4px;
+ }
+
+ .promo-card__heading {
+  .h1-text();
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.promo-card__description {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.promo-card__buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 230px;
+  margin-bottom: 60px;
+}
+
+.promo-card__old-price {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 32px;
+  color: @base-primary;
+}
+
+.promo-card__new-price {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.promo-card__order-button {
+  .reset-link();
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: @base-white;
+  background-color: @base-primary;
+  border-radius: 4px;
+}
