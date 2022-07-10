@@ -20,8 +20,12 @@
 <body class="page__body">
   <header class="page__header main-header">
     <a class="main-header__logo">
-      <img src="img/logo-mobile.svg" alt="логотип Drink2Go." width="32" height="36">
-      <h1 class="main-header__heading">Интернет-магазин кофейных напитков Drink2Go</h1>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="170" height="36">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="82" height="36">
+        <img class="main-header__logo-img" src="img/logo-mobile.svg" alt="логотип Drink2Go." width="32" height="36">
+      </picture>
+      <h1 class="main-header__heading">Интернет-магазин кофейных напитков</h1>
     </a>
     <div class="main-header__account account">
       <a class="account__link account__link--login" href="#">
