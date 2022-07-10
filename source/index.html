@@ -23,7 +23,7 @@
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="170" height="36">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="82" height="36">
-        <img class="main-header__logo-img" src="img/logo-mobile.svg" alt="логотип Drink2Go." width="32" height="36">
+        <img class="img-block" src="img/logo-mobile.svg" alt="логотип Drink2Go." width="32" height="36">
       </picture>
       <h1 class="main-header__heading">Интернет-магазин кофейных напитков</h1>
     </a>
@@ -325,10 +325,14 @@
   </main>
 
   <footer class="page__footer main-footer">
+    <h2 class="main-footer__heading visually-hidden">Ссылки</h2>
     <div class="main-footer__field main-footer__field--top footer-top">
-      <h2 class="main-footer__heading visually-hidden">Ссылки</h2>
       <a class="footer-top__logo">
-        <img src="img/logo-tablet.svg" width="82" height="36">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-desktop.svg" width="170" height="36">
+          <img class="img-block" src="img/logo-tablet.svg" width="82" height="36">
+        </picture>
+        <h3 class="footer-top__heading">Интернет-магазин кофейных напитков</h3>
       </a>
       <div class="footer-top__social social">
         <ul class="social__list">
@@ -366,7 +370,7 @@
       </div>
     </div>
 
-    <div class="main-footer__field">
+    <div class="main-footer__field main-footer__field--nav">
       <h2 class="main-footer__heading">Интернет-магазин</h2>
       <ul class="main-footer__list">
         <li class="main-footer__list-item">
@@ -384,7 +388,7 @@
       </ul>
     </div>
 
-    <div class="main-footer__field">
+    <div class="main-footer__field main-footer__field--nav">
       <h2 class="main-footer__heading">Медиа</h2>
       <ul class="main-footer__list">
         <li class="main-footer__list-item">
@@ -399,7 +403,7 @@
       </ul>
     </div>
 
-    <div class="main-footer__field">
+    <div class="main-footer__field main-footer__field--nav">
       <h2 class="main-footer__heading">Контакты</h2>
       <ul class="main-footer__list">
         <li class="main-footer__list-item">
@@ -411,10 +415,16 @@
       </ul>
     </div>
 
-    <div class="main-footer__field main-footer__field--copiright">
-      <a class="main-footer__copiright" href="https://htmlacademy.ru/intensive/adaptive">
-        Разработано в HTML Academy
-      </a>
+    <div class="main-footer__field main-footer__field--copyright">
+      <p class="main-footer__copyright">
+        Разработано в
+        <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
+          HTML Academy
+          <svg class="main-footer__copyright-logo" width="12" height="16">
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+          </svg>
+        </a>
+      </p>
     </div>
   </footer>
 

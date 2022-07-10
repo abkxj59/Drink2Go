@@ -1,3 +1,7 @@
+.main-footer {
+  display: grid;
+}
+
 .main-footer__field {
   padding: 20px;
   border-bottom: 1px solid @base-secondary;
@@ -6,8 +10,9 @@
     border: none;
   }
 
-  &--copiright {
-    padding-bottom: 30px;
+  @media (min-width: @tablet-width) {
+    border: none;
+    padding: 0;
   }
 }
 
@@ -27,25 +32,94 @@
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
-  color: @base-black;
   padding: 8px 0;
   margin-top: 4px;
 
+  &:hover {
+    color: @primary-lighter;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+
   &--address,
   &--tel {
-    .regular-text();
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
     text-transform: none;
   }
 }
 
-.main-footer__copiright {
-  .reset-link();
+.main-footer__field--nav {
+  @media (min-width: @desktop-width) {
+    margin-top: 50px;
+  }
+}
+
+.main-footer__field--copyright {
+  padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+  }
+}
+
+.main-footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
   color: @base-grey;
   font-size: 12px;
   line-height: 16px;
-  background-image: url("../../img/icon-htmlacademy.svg");
-  background-repeat: no-repeat;
-  width: 206px;
-  background-position-x: 191px;
   margin: 0 auto;
+}
+
+.main-footer__copyright-link {
+  .reset-link();
+  display: flex;
+  width: fit-content;
+  padding-left: 3px;
+
+  &:hover {
+    color: @base-primary;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+}
+
+.main-footer__copyright-logo {
+  margin-left: 4px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .main-footer {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    .wrapper();
+  }
+
+  .main-footer__field--top,
+  .main-footer__field--copyright {
+    grid-column: 1/-1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .main-footer__field--top {
+    grid-column: 1/2;
+  }
 }

@@ -9,13 +9,23 @@
   align-items: center;
   width: 40px;
   height: 40px;
-  padding: 20px 0;
-  text-align: center;
+  border-radius: 4px;
+  color: @base-grey;
 
-  &:last-child {
-    padding-right: 0;
+  &:hover {
+    color: @base-primary;
+    background-color: @base-secondary;
+  }
+  &:active {
+    background-color: @primary-opacity;
   }
 }
+
 .social__item {
   margin-left: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 20px;
+    margin-left: 0;
+  }
 }
