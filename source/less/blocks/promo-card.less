@@ -1,50 +1,84 @@
 .promo-card {
   display: grid;
-  grid-template-columns: 20px auto 20px;
-  grid-template-rows: repeat(5, auto);
   justify-items: center;
+  align-items: start;
   text-align: center;
+  min-height: 656px;
+
+  @media (min-width: @tablet-width) {
+    min-height: auto;
+    margin-bottom: 188px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
+    justify-items: start;
+    text-align: left;
+  }
 }
 
-.promo-card__prev-button {
-  .reset-button();
-  background-image: url("../img/button-prev.svg");
-  background-repeat: no-repeat;
-  background-position: 50%;
-  width: 20px;
-  grid-column: 1/2;
-  grid-row: 1/-1;
+.promo-card__pic {
+  @media (min-width: @desktop-width) {
+    grid-row: 1/5;
+  }
 }
 
-.promo-card__next-button {
-  .reset-button();
-  background-image: url("../img/button-next.svg");
-  background-repeat: no-repeat;
-  background-position: 50%;
-  width: 20px;
-  grid-column: -1/-2;
-  grid-row: 1/-1;
-}
-
- .promo-card__img {
+.promo-card__img {
   margin-top: 20px;
- }
 
- .promo-card__new-tag {
+  @media (min-width: @tablet-width) {
+    // order: 1;
+    position: absolute;
+    top: 332px;
+    left: 50%;
+    transform: translate(-50%);;
+    width: 476px;
+    height: 476px;
+  }
+  @media (min-width: @desktop-width) {
+    position: static;
+    transform: none;
+    grid-row: 1/5;
+    width: 600px;
+    height: 600px;
+    margin-top: 30px;
+    margin-left: 105px;
+  }
+}
+
+.promo-card__new-tag {
   .badge-text();
   margin-top: 10px;
   margin-bottom: 4px;
- }
 
- .promo-card__heading {
+  @media (min-width: @tablet-width) {
+    margin-top: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 180px;
+  }
+}
+
+.promo-card__heading {
   .h1-text();
   margin-top: 0;
   margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 16px;
+  }
 }
 
 .promo-card__description {
+  .regular-text();
   margin-top: 0;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 625px;
+  }
 }
 
 .promo-card__buy {
@@ -53,6 +87,13 @@
   align-items: center;
   width: 230px;
   margin-bottom: 60px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 308px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 242px;
+  }
 }
 
 .promo-card__old-price {
@@ -71,6 +112,7 @@
   font-weight: 600;
   text-decoration: none;
 }
+
 .promo-card__order-button {
   .reset-link();
   padding: 8px 20px;
@@ -79,4 +121,14 @@
   color: @base-white;
   background-color: @base-primary;
   border-radius: 4px;
+
+  &:hover {
+    background-color: @primary-lighter;
+  }
+  &:active {
+    background-color: @primary-darker;
+  }
+  &:disabled {
+    background-color: @base-grey;
+  }
 }

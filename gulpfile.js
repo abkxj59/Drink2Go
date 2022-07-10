@@ -89,6 +89,7 @@ const sprite = () => {
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
+    'source/swiper/*',
     'source/*.ico',
     'source/*.webmanifest'
   ], {
@@ -163,8 +164,8 @@ export default gulp.series(
     html,
     scripts,
     svg,
-    sprite
-    // createWebp
+    sprite,
+    createWebp
   ),
   gulp.series(
     server,

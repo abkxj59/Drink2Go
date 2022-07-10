@@ -10,6 +10,7 @@
   <link rel="preload" href="fonts/montserrat-600.woff2" as="font">
   <link rel="preload" href="fonts/montserrat-700.woff2" as="font">
 
+  <link rel="stylesheet" href="swiper/swiper-bundle.css">
   <link rel="stylesheet" href="css/style.min.css">
 
   <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
@@ -56,13 +57,19 @@
 
   <main class="page__main main-content">
 
-    <section class="promo">
+    <section class="promo swiper">
       <h2 class="promo__heading page__section-heading visually-hidden">Новинки</h2>
-      <ul class="promo__list">
-        <li class="promo__item promo__item--decaf promo__item--active promo-card">
-          <button class="promo-card__prev-button" type="button"></button>
-          <button class="promo-card__next-button" type="button"></button>
-          <img class="promo-card__img" src="img/promo-decaf-mobile.png" width="280" height="280">
+      <ul class="promo__list swiper-wrapper">
+        <li class="promo__item promo__item--decaf promo__item--active promo-card swiper-slide">
+          <picture class="promo-card__pic">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo-decaf-desktop.webp 1x, img/promo-decaf-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/promo-decaf-tablet.webp 1x, img/promo-decaf-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/promo-decaf-mobile.webp 1x, img/promo-decaf-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)" srcset="img/promo-decaf-desktop.png 1x, img/promo-decaf-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/promo-decaf-tablet.png 1x, img/promo-decaf-tablet@2x.png 2x">
+            <img class="promo-card__img" src="img/promo-decaf-mobile.png" srcset="img/promo-decaf-mobile@2x.png 2x" width="280" height="280">
+          </picture>
           <p class="promo-card__new-tag">Новинка!</p>
           <h3 class="promo-card__heading">Декаф Флэт Уайт</h3>
           <p class="promo-card__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
@@ -74,10 +81,16 @@
             <a class="promo-card__order-button" href="#">Заказать</a>
           </div>
         </li>
-        <li class="promo__item promo__item--lavander promo-card">
-          <button class="promo-card__prev-button" type="button"></button>
-          <button class="promo-card__next-button" type="button"></button>
-          <img class="promo-card__img" src="img/promo-lavanda-mobile.png" width="280" height="280">
+        <li class="promo__item promo__item--lavander promo-card swiper-slide">
+          <picture class="promo-card__pic">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo-lavanda-desktop.webp 1x, img/promo-lavanda-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/promo-lavanda-tablet.webp 1x, img/promo-lavanda-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/promo-lavanda-mobile.webp 1x, img/promo-lavanda-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)" srcset="img/promo-lavanda-desktop.png 1x, img/promo-lavanda-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/promo-lavanda-tablet.png 1x, img/promo-lavanda-tablet@2x.png 2x">
+            <img class="promo-card__img" src="img/promo-lavanda-mobile.png" srcset="img/promo-lavanda-mobile@2x.png 2x" width="280" height="280">
+          </picture>
           <p class="promo-card__new-tag">Новинка!</p>
           <h3 class="promo-card__heading">Лавандовый Латте</h3>
           <p class="promo-card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
@@ -89,10 +102,16 @@
             <a class="promo-card__order-button" href="#">Заказать</a>
           </div>
         </li>
-        <li class="promo__item promo__item--triple promo-card">
-          <button class="promo-card__prev-button" type="button"></button>
-          <button class="promo-card__next-button" type="button"></button>
-          <img class="promo-card__img" src="img/promo-triple-mobile.png" width="280" height="280">
+        <li class="promo__item promo__item--triple promo-card swiper-slide">
+          <picture class="promo-card__pic">
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo-triple-desktop.webp 1x, img/promo-triple-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/promo-triple-tablet.webp 1x, img/promo-triple-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/promo-triple-mobile.webp 1x, img/promo-triple-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1440px)" srcset="img/promo-triple-desktop.png 1x, img/promo-triple-desktop@2x.png 2x" width="600" height="600">
+            <source media="(min-width: 768px)" srcset="img/promo-triple-tablet.png 1x, img/promo-triple-tablet@2x.png 2x" width="476" height="476">
+            <img class="promo-card__img" src="img/promo-triple-mobile.png" srcset="img/promo-triple-mobile@2x.png 2x" width="280" height="280">
+          </picture>
           <p class="promo-card__new-tag">Новинка!</p>
           <h3 class="promo-card__heading">Тройной Эспрессо</h3>
           <p class="promo-card__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
@@ -105,6 +124,10 @@
           </div>
         </li>
       </ul>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </section>
 
     <section class="features">
@@ -427,7 +450,7 @@
       </p>
     </div>
   </footer>
-
+  <script type="text/javascript" src="swiper/swiper-bundle.min.js"></script>
   <script type="module" src="js/script.js"></script>
 </body>
 </html>
