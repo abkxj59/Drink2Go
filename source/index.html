@@ -189,21 +189,26 @@
 
       <section class="catalog__sort sort">
         <h3 class="sort__heading">Сортировка:</h3>
-        <div class="sort__selector">
-          <span class="sort__selected">по умолчанию</span>
-          <ul class="sort__list sort__list--closed">
+        <div class="sort__selector sort__selector--closed sort__selector--js" hidden>
+          <p class="sort__selected">по умолчанию</p>
+          <ul class="sort__list">
             <li class="sort__item sort__item--current">по умолчанию</li>
             <li class="sort__item">сначала дорогие</li>
             <li class="sort__item">сначала дешёвые</li>
             <li class="sort__item">высокий рейтинг</li>
           </ul>
         </div>
-        <!-- <select class="sort__select">
+        <!--
+          Ниже фрагмент разметки дублируется с целью осуществления доступности элемента при проблемах с загрузкой скриптов.
+          Надеюсь, это не нарушает второй подпункт критериев Адаптивности, так как реализовать стилизацию select'а без имитации его через другие элементы с использованием JS невозможно.
+          При этом, нативный select не исключается из разметки исходя из принципа прогрессивного улучшения (третий подпункт критерия Тестирования)
+        -->
+        <select class="sort__selector sort__selector--closed sort__selector--nojs">
           <option value="default">по умолчанию</option>
           <option value="to-lower-price">сначала дорогие</option>
           <option value="to-higher-price">сначала дешёвые</option>
           <option value="high-rating">высокий рейтинг</option>
-        </select> -->
+        </select>
       </section>
 
       <section class="catalog__products products">
@@ -325,32 +330,32 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--vk" href="vk.com">
-              <svg class="social__icon social__icon--vk" width="20" height="20">
+              <svg class="social__icon social__icon--vk" width="20" height="20" aria-labelledby="icon-vk">
+                <title id="icon-vk">
+                  Вконтакте
+                </title>
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
-              <span class="social__text visually-hidden">
-                Вконтакте
-              </span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--pinterest" href="pinterest.ru">
-              <svg class="social__icon social__icon--pinterest" width="22" height="22">
+              <svg class="social__icon social__icon--pinterest" width="22" height="22" aria-labelledby="icon-pinterest">
+                <title id="icon-pinterest">
+                  Pinterest
+                </title>
                 <use xlink:href="img/sprite.svg#icon-pinterest"></use>
               </svg>
-              <span class="social__text visually-hidden">
-                Pinterest
-              </span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--vk" href="ok.com">
-              <svg class="social__icon social__icon--ok" width="20" height="20">
+              <svg class="social__icon social__icon--ok" width="20" height="20" aria-labelledby="icon-ok">
+                <title id="icon-ok">
+                  Одноклассники
+                </title>
                 <use xlink:href="img/sprite.svg#icon-ok"></use>
               </svg>
-              <span class="social__text visually-hidden">
-                Одноклассники
-              </span>
             </a>
           </li>
         </ul>
@@ -408,6 +413,7 @@
       </a>
     </div>
   </footer>
-<!-- <script src="js/script.js"></script> -->
+
+  <script type="module" src="js/script.js"></script>
 </body>
 </html>
