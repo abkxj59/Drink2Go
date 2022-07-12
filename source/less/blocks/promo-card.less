@@ -4,7 +4,6 @@
   align-items: start;
   text-align: center;
   min-height: 656px;
-  // .wrapper();
 
   @media (min-width: @tablet-width) {
     min-height: auto;
@@ -12,7 +11,7 @@
   }
   @media (min-width: @desktop-width) {
     margin: 0;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     column-gap: 30px;
     justify-items: start;
     text-align: left;
@@ -79,7 +78,13 @@
   .wrapper();
 
   @media (min-width: @tablet-width) {
-    max-width: 605px;
+    width: 605px;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+    // width: 100%;
   }
 }
 

@@ -168,6 +168,16 @@
   }
 }
 
+.filter__input[type="radio"] + .filter__label::before {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filter__input[type="checkbox"] + .filter__label::before {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .filter__button--reset {
   .reset-button();
   display: block;
@@ -185,6 +195,9 @@
   @media (min-width: @tablet-width) {
     grid-column: 2/3;
     margin-top: 10px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 40px;
   }
 
   &:hover {
