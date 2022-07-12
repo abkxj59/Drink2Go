@@ -1,49 +1,31 @@
-.price-field {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .price-field__slider {
-  position: relative;
-  width: 280px;
-  height: 2px;
-  background-color: @light-grey;
   margin: 31px 0;
-
-  &::before {
-    position: absolute;
-    top: -11px;
-    left: 0;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background: #FFFFFF;
-    border: 2px solid #9070EC;
-    border-radius: 50%;
-  }
-
-  &::after {
-    position: absolute;
-    top: -11px;
-    right: 20px;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background: #FFFFFF;
-    border: 2px solid #9070EC;
-    border-radius: 50%;
-  }
+  height: 2px;
 }
 
+.price-field__container {
+  display: flex;
+  padding-top: 2px;
+}
 .price-field__input {
   box-sizing: border-box;
   width: 125px;
+  flex-grow: 1;
   height: 40px;
   border: 2px solid #9070EC;
   border-radius: 4px;
   font-weight: 500;
   text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  // выключение стандартных контролов для поля ввода
+  -moz-appearance:textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+  }
 
   &::placeholder {
     color: @base-grey;
@@ -65,7 +47,7 @@
   display: block;
   width: 10px;
   height: 2px;
+  margin: 19px 10px;
   background-color: @base-grey;
-  align-self: center;
 }
 

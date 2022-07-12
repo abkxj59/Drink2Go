@@ -19,7 +19,11 @@
 .main-footer__heading {
   .h4-text();
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+
+  &--contacts {
+    margin-bottom: 20px;
+  }
 }
 
 .main-footer__list {
@@ -43,12 +47,24 @@
     color: @primary-darker;
   }
 
+  &--address {
+    background-image: url("../../img/icon-address.svg");
+  }
+  &--tel {
+    background-image: url("../../img/icon-phone.svg");
+  }
+
   &--address,
   &--tel {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     text-transform: none;
+    margin-top: 16px;
+    padding: 0;
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position-y: 2px;
   }
 }
 

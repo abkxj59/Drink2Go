@@ -1,16 +1,50 @@
 .feature {
-  background-image: url("../../img/feature-speed.svg");
   background-repeat: no-repeat;
   background-position-x: 50%;
+
+  &--speed {
+    background-image: url("../../img/feature-speed.svg");
+  }
+  &--fit {
+    background-image: url("../../img/feature-fit.svg");
+  }
+  &--energy {
+    background-image: url("../../img/feature-energy.svg");
+  }
+  &--eco {
+    background-image: url("../../img/feature-eco.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 72px;
+    background-position: 0 0;
+    text-align: left;
+  }
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    background-position-x: 50%;
+    text-align: center;
+  }
 }
 
 .feature__heading {
   .h3-text();
   padding-top: 66px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
+  @media (min-width: @desktop-width) {
+    padding-top: 76px;
+  }
 }
 
 .feature__text {
+  margin: 0;
   margin-top: 4px;
-  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
+  }
 }

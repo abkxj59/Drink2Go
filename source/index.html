@@ -11,6 +11,7 @@
   <link rel="preload" href="fonts/montserrat-700.woff2" as="font">
 
   <link rel="stylesheet" href="swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="leaflet/leaflet.css">
   <link rel="stylesheet" href="css/style.min.css">
 
   <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
@@ -24,7 +25,7 @@
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="170" height="36">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="82" height="36">
-        <img class="img-block" src="img/logo-mobile.svg" alt="логотип Drink2Go." width="32" height="36">
+        <img class="main-header__img img-block" src="img/logo-mobile.svg" alt="логотип Drink2Go." width="32" height="36">
       </picture>
       <h1 class="main-header__heading">Интернет-магазин кофейных напитков</h1>
     </a>
@@ -134,21 +135,23 @@
       <h2 class="features__heading page__section-heading">Преимущества</h2>
       <p class="features__description page__section-description">Главные причины выбрать Drink2Go</p>
       <ul class="features__list">
-        <li class="features__item feature">
+        <li class="features__item feature feature--speed">
           <h3 class="feature__heading">Скорость</h3>
           <p class="feature__text">Готовый напиток всегда под рукой &mdash; просто открой банку</p>
         </li>
-        <li class="features__item feature">
+        <li class="features__item feature feature--fit">
           <h3 class="feature__heading">Удобство</h3>
-          <p class="feature__text">Легко помещается и в карман, и в маленькую сумочку</p>
+          <p class="feature__text">Легко помещается и в карман, <br>
+            и в маленькую сумочку</p>
         </li>
-        <li class="features__item feature">
+        <li class="features__item feature feature--energy">
           <h3 class="feature__heading">Бодрость</h3>
           <p class="feature__text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
         </li>
-        <li class="features__item feature">
+        <li class="features__item feature feature--eco">
           <h3 class="feature__heading">Экологичность</h3>
-          <p class="feature__text">Вся упаковка сделана из перерабатываемых материалов</p>
+          <p class="feature__text">Вся упаковка сделана <br>
+            из перерабатываемых материалов</p>
         </li>
       </ul>
     </section>
@@ -162,10 +165,20 @@
         <form class="catalog__filter-form filter" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="filter__field filter__field--price price-field">
             <legend class="filter__legend price-field__legend">Цена</legend>
-            <div class="price-field__slider"></div>
-            <input class="filter__input price-field__input price-field__input--min" type="number" name="price-min" placeholder="0" min="0" max="1000" step="50">
-            <span class="price-field__dash"></span>
-            <input class="filter__input price-field__input price-field__input--max" type="number" name="price-max" placeholder="1000" min="0" max="1000" step="50">
+            <div class="price-field__slider slider">
+              <div class="slider__scale">
+                <div class="slider__bar" style="
+                  margin-left: 0%;
+                  width: 90%;"></div>
+              </div>
+              <div class="slider__toggle slider__toggle--min" style="left: 0%"></div>
+              <div class="slider__toggle slider__toggle--max" style="left: 90%"></div>
+            </div>
+            <div class="price-field__container">
+              <input class="filter__input price-field__input price-field__input--min" type="number" name="price-min" placeholder="0" min="0" max="1000" step="50">
+              <span class="price-field__dash"></span>
+              <input class="filter__input price-field__input price-field__input--max" type="number" name="price-max" placeholder="1000" min="0" max="1000" step="50" value="900">
+            </div>
           </fieldset>
           <fieldset class="filter__field filter__field--lactose milk-field">
             <legend class="filter__legend">Наличие молока</legend>
@@ -244,12 +257,16 @@
           <li class="products__item">
             <article class="product">
               <a class="product__link" href="#">
-                <img class="product__img" src="img/product-1.png" width="130" height="180">
+                <picture>
+                  <source type="image/webp" srcset="img/product-1.webp 1x, img/product-1@2x.webp 2x">
+                  <img class="product__img" src="img/product-1.png" srcset="img/product-1@2x.png 2x" width="130" height="188">
+                </picture>
               </a>
               <a class="product__link" href="#">
                 <h4 class="product__heading">Декаф Флэт Уайт</h4>
               </a>
-              <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="product__description">Кофе без кофеина из Эфиопии <br>
+                с натуральным фермерским молоком</p>
               <p class="product__price">225&#8381;</p>
               <button class="product__button" type="button">В корзину</button>
             </article>
@@ -257,12 +274,16 @@
           <li class="products__item">
             <article class="product">
               <a class="product__link" href="#">
-                <img class="product__img" src="img/product-2.png" width="130" height="180">
+                <picture>
+                  <source type="image/webp" srcset="img/product-2.webp 1x, img/product-2@2x.webp 2x">
+                  <img class="product__img" src="img/product-2.png" srcset="img/product-2@2x.png 2x" width="130" height="188">
+                </picture>
               </a>
               <a class="product__link" href="#">
                 <h4 class="product__heading">Декаф Флэт Уайт</h4>
               </a>
-              <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="product__description">Кофе без кофеина из Эфиопии <br>
+                с натуральным фермерским молоком</p>
               <p class="product__price">225&#8381;</p>
               <button class="product__button" type="button">В корзину</button>
             </article>
@@ -270,12 +291,16 @@
           <li class="products__item">
             <article class="product">
               <a class="product__link" href="#">
-                <img class="product__img" src="img/product-3.png" width="130" height="180">
+                <picture>
+                  <source type="image/webp" srcset="img/product-3.webp 1x, img/product-3@2x.webp 2x">
+                  <img class="product__img" src="img/product-3.png" srcset="img/product-3@2x.png 2x" width="130" height="188">
+                </picture>
               </a>
               <a class="product__link" href="#">
                 <h4 class="product__heading">Декаф Флэт Уайт</h4>
               </a>
-              <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="product__description">Кофе без кофеина из Эфиопии <br>
+                с натуральным фермерским молоком</p>
               <p class="product__price">225&#8381;</p>
               <button class="product__button" type="button">В корзину</button>
             </article>
@@ -283,12 +308,16 @@
           <li class="products__item">
             <article class="product">
               <a class="product__link" href="#">
-                <img class="product__img" src="img/product-4.png" width="130" height="180">
+                <picture>
+                  <source type="image/webp" srcset="img/product-4.webp 1x, img/product-4@2x.webp 2x">
+                  <img class="product__img" src="img/product-4.png" srcset="img/product-4@2x.png 2x" width="130" height="188">
+                </picture>
               </a>
               <a class="product__link" href="#">
                 <h4 class="product__heading">Декаф Флэт Уайт</h4>
               </a>
-              <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="product__description">Кофе без кофеина из Эфиопии <br>
+                с натуральным фермерским молоком</p>
               <p class="product__price">225&#8381;</p>
               <button class="product__button" type="button">В корзину</button>
             </article>
@@ -296,12 +325,16 @@
           <li class="products__item">
             <article class="product">
               <a class="product__link" href="#">
-                <img class="product__img" src="img/product-5.png" width="130" height="180">
+                <picture>
+                  <source type="image/webp" srcset="img/product-5.webp 1x, img/product-5@2x.webp 2x">
+                  <img class="product__img" src="img/product-5.png" srcset="img/product-5@2x.png 2x" width="130" height="188">
+                </picture>
               </a>
               <a class="product__link" href="#">
                 <h4 class="product__heading">Декаф Флэт Уайт</h4>
               </a>
-              <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="product__description">Кофе без кофеина из Эфиопии <br>
+                с натуральным фермерским молоком</p>
               <p class="product__price">225&#8381;</p>
               <button class="product__button" type="button">В корзину</button>
             </article>
@@ -309,12 +342,16 @@
           <li class="products__item">
             <article class="product">
               <a class="product__link" href="#">
-                <img class="product__img" src="img/product-6.png" width="130" height="180">
+                <picture>
+                  <source type="image/webp" srcset="img/product-6.webp 1x, img/product-6@2x.webp 2x">
+                  <img class="product__img" src="img/product-6.png" srcset="img/product-6@2x.png 2x" width="130" height="188">
+                </picture>
               </a>
               <a class="product__link" href="#">
                 <h4 class="product__heading">Декаф Флэт Уайт</h4>
               </a>
-              <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="product__description">Кофе без кофеина из Эфиопии <br>
+                с натуральным фермерским молоком</p>
               <p class="product__price">225&#8381;</p>
               <button class="product__button" type="button">В корзину</button>
             </article>
@@ -323,7 +360,13 @@
         </ul>
         <ul class="catalog__pagination pagination">
           <li class="pagination__item">
-            <button class="pagination__button pagination__button--back" type="button"><span class="pagination__button-text">Назад</span></button>
+            <button class="pagination__button pagination__button--prev" type="button">
+              <svg class="pagination__button-icon" width="6" height="10" aria-labelledby="button-prev">
+                <title id="button-next">Назад</title>
+                <use xlink:href="img/sprite.svg#button-prev"></use>
+              </svg>
+              <span class="pagination__button-text" hidden>Назад</span>
+            </button>
           </li>
           <li class="pagination__item">
             <button class="pagination__button" type="button">1</button>
@@ -335,7 +378,13 @@
             <button class="pagination__button" type="button">3</button>
           </li>
           <li class="pagination__item">
-            <button class="pagination__button pagination__button--forward" type="button"><span class="pagination__button-text">Вперед</span></button>
+            <button class="pagination__button pagination__button--next" type="button">
+              <svg class="pagination__button-icon" width="6" height="10" aria-labelledby="button-next">
+                <title id="button-next">Вперёд</title>
+                <use xlink:href="img/sprite.svg#button-next"></use>
+              </svg>
+              <span class="pagination__button-text" hidden>Вперёд</span>
+            </button>
           </li>
         </ul>
       </section>
@@ -343,7 +392,16 @@
 
     <section class="map">
       <h2 class="map__heading page__section-heading visually-hidden">Расположение магазина</h2>
-      <img class="map__img" src="img/map-mobile@2x.png" width="320" height="420">
+      <div id="map" class="map__js" hidden></div>
+      <picture class="map__nojs">
+        <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" width="1440" height="540">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="480">
+        <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+
+        <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" width="1440" height="540">
+        <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" width="768" height="480">
+        <img class="map__img" src="img/map-mobile.png" srcset="img/map-mobile@2x.png 2x" width="320" height="420">
+      </picture>
     </section>
   </main>
 
@@ -351,9 +409,9 @@
     <h2 class="main-footer__heading visually-hidden">Ссылки</h2>
     <div class="main-footer__field main-footer__field--top footer-top">
       <a class="footer-top__logo">
-        <picture>
+        <picture class="footer-top__logo-pic">
           <source media="(min-width: 768px)" srcset="img/logo-desktop.svg" width="170" height="36">
-          <img class="img-block" src="img/logo-tablet.svg" width="82" height="36">
+          <img class="footer-top__logo-img img-block" src="img/logo-tablet.svg" width="82" height="36">
         </picture>
         <h3 class="footer-top__heading">Интернет-магазин кофейных напитков</h3>
       </a>
@@ -427,7 +485,7 @@
     </div>
 
     <div class="main-footer__field main-footer__field--nav">
-      <h2 class="main-footer__heading">Контакты</h2>
+      <h2 class="main-footer__heading main-footer__heading--contacts">Контакты</h2>
       <ul class="main-footer__list">
         <li class="main-footer__list-item">
           <a class="main-footer__link main-footer__link--address" href="geo:59.968330,30.317369">Санкт-Петербург, набережная реки Карповки, дом 5</a>
@@ -450,6 +508,8 @@
       </p>
     </div>
   </footer>
+
+  <script src="leaflet/leaflet.js"></script>
   <script type="text/javascript" src="swiper/swiper-bundle.min.js"></script>
   <script type="module" src="js/script.js"></script>
 </body>

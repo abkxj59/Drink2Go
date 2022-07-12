@@ -1,13 +1,27 @@
 .filter {
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
+
 .filter__field {
   border: none;
   padding: 0;
   margin: 0;
   margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .filter__legend {
@@ -159,10 +173,30 @@
   display: block;
   width: 100%;
   padding: 8px;
+  margin-top: 30px;
+  border-radius: 4px;
   background-color: @base-white;
   font-family: "Montserrat", "Tahoma", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: @base-primary;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2/3;
+    margin-top: 40px;
+  }
+
+  &:hover {
+    background-color: @primary-lighter;
+    color: @base-white;
+  }
+  &:active {
+    background-color: @primary-darker;
+    color: @base-white;
+  }
+  &:disabled {
+    background-color: @light-grey;
+    color: @base-white;
+  }
 }

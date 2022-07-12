@@ -1,6 +1,7 @@
 .footer-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
@@ -9,14 +10,18 @@
 }
 
 .footer-top__logo {
-  padding: 22px 0;
-
   @media (min-width: @tablet-width) {
     padding: 42px 0 32px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 40px 0 0;
+  }
+}
+
+.footer-top__logo-img {
+  @media (min-width: @tablet-width) {
+    width: 170px;
   }
 }
 
@@ -34,7 +39,7 @@
 }
 
 .footer-top__social {
-  margin: 20px 0;
+  // margin: 20px 0;
 
   @media (min-width: @tablet-width) {
     margin: 40px 0 30px;
