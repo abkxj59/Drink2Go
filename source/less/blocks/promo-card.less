@@ -79,10 +79,15 @@
   .wrapper();
 
   @media (min-width: @tablet-width) {
-    width: 625px;
+    max-width: 605px;
   }
 }
 
+.promo-card__break {
+  @media (max-width: @mobile-width) {
+    display: none;
+  }
+}
 .promo-card__buy {
   display: flex;
   justify-content: space-between;

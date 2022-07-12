@@ -1,17 +1,19 @@
 .main-header {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
+  .wrapper();
 }
 
 .main-header__logo {
   display: flex;
   align-items: flex-start;
-  padding: 12px 20px;
+  padding: 12px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 22px 20px;
+    padding: 22px 0;
+    // margin-right: 67px;
   }
 }
 .main-header__img {
@@ -37,10 +39,10 @@
 }
 
 .main-header__account {
-  margin-right: 60px;
+  margin-right: 40px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 20px;
+    margin-right: 0;
     order: 5;
   }
 
@@ -53,7 +55,6 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    max-width: 500px;
+    width: fit-content;
   }
 }
