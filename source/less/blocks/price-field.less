@@ -10,6 +10,7 @@
 .price-field__input {
   box-sizing: border-box;
   flex-grow: 1;
+  width: 125px;
   height: 40px;
   border: 2px solid #9070EC;
   border-radius: 4px;
@@ -19,6 +20,12 @@
   font-size: inherit;
   line-height: inherit;
 
+  @media (min-width: @tablet-width) {
+    width: 96px;
+  }
+  @media (min-width: @tablet-width) {
+    width: 134px;
+  }
   // выключение стандартных контролов для поля ввода
   -moz-appearance:textfield;
   &::-webkit-outer-spin-button,
